@@ -49,7 +49,8 @@ RUN git config --global user.email "tutor@overhang.io" \
 # Patch edx-platform
 # Fix broken "Pages" view in Studio
 # https://github.com/openedx/edx-platform/pull/30550
-RUN curl -fsSL https://github.com/open-craft/edx-platform/commit/3d54f284f82b61e693ad652d8d6e46a226fcb36d.patch | git am
+# NAU: the open-craft patch is missing !! Nevertheless NAU is already patched on https://github.com/fccn/edx-platform/commit/f821ab8fe94077cffef336bca9f1f1aa836e23e5
+# RUN curl -fsSL https://github.com/open-craft/edx-platform/commit/3d54f284f82b61e693ad652d8d6e46a226fcb36d.patch | git am
 # Fix xblock ajax handler vulnerability
 # https://github.com/overhangio/edx-platform/tree/overhangio/sec-xblock-ajax
 RUN curl -fsSL https://github.com/overhangio/edx-platform/commit/3f0f9eed42.patch | git am
